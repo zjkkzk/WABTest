@@ -26,10 +26,24 @@ class MMKVWrapper private constructor(private val mmkv: Any) {
         }.invoke(key, value)
     }
 
+    fun getInt(key: String, defValue: Int): Int {
+        return mmkv.asResolver().firstMethod {
+            name = "getInt"
+            parameters(String::class, Int::class)
+        }.invoke<Int>(key, defValue)!!
+    }
+
     fun putString(key: String, value: String) {
         mmkv.asResolver().firstMethod {
             name = "putString"
             parameters(String::class, String::class)
         }.invoke(key, value)
+    }
+
+    fun getString(key: String, defValue: String): String {
+        return mmkv.asResolver().firstMethod {
+            name = "getString"
+            parameters(String::class, String::class)
+        }.invoke<String>(key, defValue)!!
     }
 }

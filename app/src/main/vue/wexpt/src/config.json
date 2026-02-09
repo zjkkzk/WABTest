@@ -1,0 +1,140 @@
+[
+  {
+    "name": "新版网页浮窗(8.0.61+)",
+    "key": "clicfg_webview_new_float_ball",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "快捷语音输入(8.0.62+)",
+    "key": "clicfg_chatting_voice_input",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "聊天实况发送(8.0.63+)",
+    "key": "clicfg_chatting_c2c_live_send_v4",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "截图组件重构(8.0.63+)",
+    "key": "clicfg_new_screenshotutil",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "截图转发入口(8.0.63+)",
+    "key": "clicfg_screenshot_share_service",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "朋友圈视频进度条(8.0.64+)",
+    "key": "clicfg_sns_use_expandable_video_seek_bar",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "半屏通知回复(8.0.64+)",
+    "key": "clicfg_notification_half_screen_chat_enable_new",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "多选分析聊天(8.0.65+)",
+    "key": "clicfg_yuanbao_analyze_chat_records_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "多选分析聊天允许单聊(8.0.65+)",
+    "key": "clicfg_yuanbao_analyze_private_chat",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "聊天长按菜单总结文章(8.0.65+)",
+    "key": "clicfg_yuanbao_summary_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "元宝制作头像(8.0.65+)",
+    "key": "clicfg_yuanbao_making_avatar_enable",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "新设置页(8.0.66+)",
+    "key": "clicfg_new_setting",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "新设置页搜索(8.0.66+)",
+    "key": "clicfg_setting_search",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "批量撤回(8.0.66+)",
+    "key": "clicfg_batch_revoke_msg_enable",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "聊天机器人负一屏(8.0.67+)",
+    "key": "clicfg_enable_optimize_config",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "转发分词搜索支持建群(8.0.67+)",
+    "key": "clicfg_forward_multi_search_create_chatroom",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "启用消息多选「复制」入口(8.0.67+)",
+    "key": "clicfg_msg_multi_select_copy_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "隐藏消息多选「邮件」入口(8.0.67+)",
+    "key": "clicfg_msg_multi_select_hide_mail_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "上滑转文字，支持翻译和朗读(8.0.67+)",
+    "key": "clicfg_chatting_trans_and_read",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "开启有线迁移(8.0.67+)",
+    "key": "clicfg_enable_aoa_migration",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "通知显示头像(8.0.67+)",
+    "key": "clicfg_notification_avatar_switch",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "独立的群聊二维码(8.0.67+)",
+    "key": "clicfg_chatroom_manage_independent_qr",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "元宝 多选消息-复制到元宝 app(8.0.67+)",
+    "key": "clicfg_yuanbao_copy_multiple_chat_records_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  }
+]

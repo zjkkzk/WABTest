@@ -27,7 +27,7 @@ object SettingHooker : YukiBaseHooker() {
                     val webView = instance<FrameLayout>().apply { context.injectModuleAppResources() }
                     val webViewWrapper = WebViewWrapper.get(webView)
                     webViewWrapper.addJavascriptInterface(WebJsApi(uin), "WExpt")
-                    webViewWrapper.loadDataWithBaseURL("file:///android_asset/setting/", WebConfig.html)
+                    webViewWrapper.loadDataWithBaseURL("file:///android_asset/", WebConfig.getHtml("index.html"))
                     resultNull()
                 }
             }

@@ -9,8 +9,14 @@ class WebJsApi(uin: Int) {
     private val appManager = AppManager(uin)
 
     @JavascriptInterface
-    fun putExptArgs(jsonArrayStr: String) {
-        val args = JsonUtil.fromJson<List<AppItem.Arg>>(jsonArrayStr)
-        appManager.putAppItem(AppItem(exptId = 99999, args = args))
+    fun putExptArgs(str: String) {
+        val args = JsonUtil.fromJson<List<AppItem.Arg>>(str)
+        appManager.putAppItemArgs(args)
+    }
+
+    @JavascriptInterface
+    fun getExptArgs(): String {
+        val args = appManager.getAppItemArgs()
+        return JsonUtil.toJson(args)
     }
 }

@@ -2,7 +2,6 @@ package me.hd.wexpt.core
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import me.hd.wexpt.misc.util.JsonUtil
 
 @Serializable
 data class AppItem(
@@ -36,8 +35,4 @@ data class AppItem(
         @SerialName("Val")
         var value: String = "",
     )
-
-    override fun toString(): String {
-        return JsonUtil.toJson(this)
-    }
 }

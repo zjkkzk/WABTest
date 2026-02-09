@@ -7,9 +7,9 @@ import me.hd.wexpt.misc.ext.readAssetsText
 object WebConfig {
     const val URL = "http://wexpt.weixin.com/"
 
-    val html: String by lazy {
+    fun getHtml(path: String): String {
         val ctx = HostData.appContext
         ctx.injectModuleAppResources()
-        ctx.readAssetsText("setting/index.html")
+        return ctx.readAssetsText(path)
     }
 }

@@ -9,6 +9,14 @@ android {
     namespace = "me.hd.wexpt"
     compileSdk = 36
 
+    sourceSets {
+        named("main") {
+            assets {
+                srcDirs("src/main/vue/wexpt/dist")
+            }
+        }
+    }
+
     defaultConfig {
         applicationId = "me.hd.wexpt"
         minSdk = 27
@@ -17,6 +25,7 @@ android {
         versionName = "1.0.4"
         buildConfigField("String", "APP_NAME", "\"WExpt\"")
     }
+
     androidResources {
         additionalParameters += listOf("--allow-reserved-package-id", "--package-id", "0x78")
     }
@@ -38,7 +47,7 @@ android {
                 "kotlin/**",
                 "META-INF/**",
                 "**.bin",
-                "kotlin-tooling-metadata.json"
+                "kotlin-tooling-metadata.json",
             )
         )
     }

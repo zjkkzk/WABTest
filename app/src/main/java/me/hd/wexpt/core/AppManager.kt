@@ -1,5 +1,6 @@
 package me.hd.wexpt.core
 
+import me.hd.wexpt.misc.util.JsonUtil
 import me.hd.wexpt.misc.wrapper.MMKVWrapper
 
 class AppManager(uin: Int) {
@@ -11,14 +12,17 @@ class AppManager(uin: Int) {
         MMKVWrapper.get("${uin}_WxExptAppIdMmkv")
     }
 
-    fun putAppItem(appItem: AppItem) {
-        appKeyMmkv.apply {
-            appItem.args.forEach { arg ->
-                putInt(arg.key, appItem.exptId)
-            }
-        }
-        appIdMmkv.apply {
-            putString(appItem.exptId.toString(), appItem.toString())
-        }
+    private val fakeExptId = 99999
+
+    fun putAppItemArgs(args: List<AppItem.Arg>) {
+        val appItem = AppItem(fakeExptId, args = args)
+        appIdMmkv.putString(fakeExptId.toString(), JsonUtil.toJson(appItem))
+    }
+
+    fun getAppItemArgs(): List<AppItem.Arg> {
+        val defAppItem = AppItem(fakeExptId)
+        val jsonAppItem = appIdMmkv.getString(fakeExptId.toString(), JsonUtil.toJson(defAppItem))
+        val objAppItem = JsonUtil.fromJson<AppItem>(jsonAppItem)
+        return objAppItem.args
     }
 }
