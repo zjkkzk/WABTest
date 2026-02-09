@@ -2,7 +2,7 @@ package me.hd.wexpt.core
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.json.Json
+import me.hd.wexpt.misc.util.JsonUtil
 
 @Serializable
 data class AppItem(
@@ -38,7 +38,6 @@ data class AppItem(
     )
 
     override fun toString(): String {
-        val json = Json { encodeDefaults = true }
-        return json.encodeToString(this)
+        return JsonUtil.toJson(this)
     }
 }

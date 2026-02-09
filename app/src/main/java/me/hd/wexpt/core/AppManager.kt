@@ -1,13 +1,8 @@
 package me.hd.wexpt.core
 
-import me.hd.wexpt.utils.wrapper.ConfigWrapper
-import me.hd.wexpt.utils.wrapper.MMKVWrapper
+import me.hd.wexpt.misc.wrapper.MMKVWrapper
 
-class AppManager {
-    private val uin by lazy {
-        ConfigWrapper.get("system_config_prefs").getUin()
-    }
-
+class AppManager(uin: Int) {
     private val appKeyMmkv by lazy {
         MMKVWrapper.get("${uin}_WxExptAppKeyMmkv")
     }

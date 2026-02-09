@@ -1,4 +1,4 @@
-package me.hd.wexpt.utils.wrapper
+package me.hd.wexpt.misc.wrapper
 
 import com.highcapable.kavaref.KavaRef.Companion.asResolver
 import com.highcapable.kavaref.KavaRef.Companion.resolve
