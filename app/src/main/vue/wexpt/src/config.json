@@ -136,5 +136,65 @@
     "key": "clicfg_yuanbao_copy_multiple_chat_records_entrance",
     "trueVal": "MQ==",
     "falseVal": "MA=="
+  },
+  {
+    "name": "聊天输入栏大字体适配(8.0.69+)",
+    "key": "clicfg_chatting_chatfooter_fix_big_font",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "启用聊天记录「从当前听」入口(8.0.69+)",
+    "key": "clicfg_enable_chat_records_tts_entrance",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "聊天语音输入支持opus(8.0.69+)",
+    "key": "clicfg_chatting_voice_input_opus",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "「元宝总结」功能使用元宝 app(8.0.69+)",
+    "key": "clicfg_yuanbao_summarize_use_app",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "本地文件预览(8.0.69+)",
+    "key": "clicfg_enable_loacl_file_preview_support_extensions",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "联系人 & 陌生人备注上云(8.0.69+)",
+    "key": "clicfg_set_contact_property_enable",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "是否开启跨平台近场迁移(8.0.69+)",
+    "key": "clicfg_enable_cross_near_migration",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "过期且未下载视频禁止下载(8.0.69+)",
+    "key": "clicfg_video_expired_ignore_download",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "状态春节debug开关(8.0.69+)",
+    "key": "clicfg_status_spring_2026_guide_dialog",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
+  },
+  {
+    "name": "元宝 - 多选消息 - 复制到元宝 app 跳过弹窗(8.0.69+)",
+    "key": "clicfg_yuanbao_copy_chat_records_skip_dialog",
+    "trueVal": "MQ==",
+    "falseVal": "MA=="
   }
 ]
