@@ -3,7 +3,7 @@
     <div class="page">
       <header class="page__header">
         <div class="page__title">实验配置</div>
-        <div class="page__subtitle">勾选后保存即可生效</div>
+        <div class="page__subtitle">勾选保存后重启应用生效</div>
       </header>
 
       <div class="page__summary">
@@ -18,7 +18,7 @@
             class="group"
           >
             <div class="group__title">
-              {{ group.version || '未标注版本' }}
+              {{ group.version || "未标注版本" }}
               <span class="group__count">({{ group.items.length }})</span>
             </div>
             <div class="weui-cells__group weui-cells__group_form">
@@ -47,87 +47,90 @@
         </div>
         <div class="weui-form__ft">
           <div class="weui-form__opr-area">
-            <a role="button" class="weui-btn weui-btn_primary" href="javascript:" @click="save">
+            <a
+              role="button"
+              class="weui-btn weui-btn_primary"
+              href="javascript:"
+              @click="save"
+            >
               保存
             </a>
           </div>
         </div>
       </div>
-
-      <footer class="page__footer">如需生效，请返回应用刷新页面</footer>
     </div>
   </div>
 </template>
 
 <script>
-import configGroups from './config.json'
+import configGroups from "./config.json";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       configGroups,
-      checked: {}
-    }
+      checked: {},
+    };
   },
   computed: {
     enabledCount() {
-      return Object.values(this.checked).filter(Boolean).length
+      return Object.values(this.checked).filter(Boolean).length;
     },
     normalizedGroups() {
       return this.configGroups
         .map((group) => {
-          const version = Object.keys(group)[0] || ''
-          const items = group[version] || []
-          return { version, items }
+          const version = Object.keys(group)[0] || "";
+          const items = group[version] || [];
+          return { version, items };
         })
-        .filter((group) => group.items.length > 0)
+        .filter((group) => group.items.length > 0);
     },
     flatConfigs() {
-      return this.normalizedGroups.flatMap((group) => group.items)
+      return this.normalizedGroups.flatMap((group) => group.items);
     },
     totalCount() {
-      return this.flatConfigs.length
-    }
+      return this.flatConfigs.length;
+    },
   },
   mounted() {
-    const localArgs = this.loadLocalArgs()
-    const localMap = new Map(localArgs.map((arg) => [arg.Key, arg.Val]))
+    const localArgs = this.loadLocalArgs();
+    const localMap = new Map(localArgs.map((arg) => [arg.Key, arg.Val]));
     this.flatConfigs.forEach((config) => {
-      const localVal = localMap.get(config.key)
-      this.$set(this.checked, config.key, localVal === config.trueVal)
-    })
+      const localVal = localMap.get(config.key);
+      this.$set(this.checked, config.key, localVal === config.trueVal);
+    });
   },
   methods: {
     loadLocalArgs() {
       if (window.WExpt && window.WExpt.getExptArgs) {
         try {
-          const json = window.WExpt.getExptArgs()
-          return JSON.parse(json) || []
+          const json = window.WExpt.getExptArgs();
+          return JSON.parse(json) || [];
         } catch (error) {
-          return []
+          return [];
         }
       }
-      return []
+      return [];
     },
     save() {
       const args = this.flatConfigs.map((config) => ({
         Key: config.key,
-        Val: this.checked[config.key] ? config.trueVal : config.falseVal
-      }))
+        Val: this.checked[config.key] ? config.trueVal : config.falseVal,
+      }));
       if (window.WExpt && window.WExpt.putExptArgs) {
         try {
-          window.WExpt.putExptArgs(JSON.stringify(args))
-          alert('保存成功')
+          window.WExpt.putExptArgs(JSON.stringify(args));
+          alert("保存成功");
         } catch (error) {
-          alert('保存出错: 调用失败')
+          alert("保存出错: 调用失败");
         }
       } else {
-        alert('保存出错: 接口异常')
+        alert("保存出错: 接口异常");
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -144,7 +147,8 @@ export default {
   min-height: 100vh;
   background: linear-gradient(180deg, #eef6f6 0%, #f4f6f8 30%, #f4f6f8 100%);
   color: var(--text);
-  font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
