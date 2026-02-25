@@ -1,7 +1,7 @@
 [versions]
-agp = "8.13.1"
-kotlin = "2.2.21"
-devtools-ksp = "2.3.3"
+agp = "8.13.2"
+kotlin = "2.3.10"
+devtools-ksp = "2.3.5"
 
 [libraries]
 annotation = { module = "androidx.annotation:annotation", version = "1.9.1" }
@@ -9,8 +9,8 @@ xposed-api = { module = "de.robv.android.xposed:api", version = "82" }
 yukihookapi-api = { module = "com.highcapable.yukihookapi:api", version = "1.3.1" }
 yukihookapi-ksp-xposed = { module = "com.highcapable.yukihookapi:ksp-xposed", version = "1.3.1" }
 kavaref-core = { module = "com.highcapable.kavaref:kavaref-core", version = "1.0.2" }
-kavaref-extension = { module = "com.highcapable.kavaref:kavaref-extension", version = "1.0.1" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.9.0" }
+kavaref-extension = { module = "com.highcapable.kavaref:kavaref-extension", version = "1.0.2" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.10.0" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
