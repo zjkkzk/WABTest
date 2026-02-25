@@ -15,6 +15,7 @@ class AppManager(uin: Int) {
     private val fakeExptId = 99999
 
     fun putAppItemArgs(args: List<AppItem.Arg>) {
+        args.forEach { arg -> appKeyMmkv.putInt(arg.key, fakeExptId) }
         val appItem = AppItem(fakeExptId, args = args)
         appIdMmkv.putString(fakeExptId.toString(), JsonUtil.toJson(appItem))
     }
