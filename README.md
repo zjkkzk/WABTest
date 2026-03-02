@@ -68,6 +68,12 @@ WeChat Expt App
 | <img src="images/clicfg_yuanbao_summary_entrance/before/img.png" width="180" /> <img src="images/clicfg_yuanbao_summary_entrance/after/img.png" width="180" />         | 聊天长按菜单总结文章 |
 | <img src="images/clicfg_yuanbao_making_avatar_enable/before/img.png" width="180" /> <img src="images/clicfg_yuanbao_making_avatar_enable/after/img.png" width="180" /> | 元宝制作头像     |
 
+### 8.0.64+
+
+| 预览图                                                                                                                                                                              | 功能       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| <img src="images/clicfg_sns_use_expandable_video_seek_bar/before/img.png" width="180" /> <img src="images/clicfg_sns_use_expandable_video_seek_bar/after/img.png" width="180" /> | 朋友圈视频进度条 |
+
 ### 8.0.62+
 
 | 预览图                                                                                                                                                    | 功能     |

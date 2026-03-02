@@ -178,7 +178,7 @@
   {
     "8.0.64+": [
       {
-        "name": "朋友圈视频进度条",
+        "name": "[图]朋友圈视频进度条",
         "key": "clicfg_sns_use_expandable_video_seek_bar",
         "trueVal": "MQ==",
         "falseVal": "MA=="
