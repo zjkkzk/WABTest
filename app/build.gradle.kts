@@ -5,6 +5,10 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
+val vueProjectDir = file("src/main/vue/wexpt")
+val vueDistDir = file("$vueProjectDir/dist")
+val npmCmd = if (System.getProperty("os.name").startsWith("Windows")) "npm.cmd" else "npm"
+
 android {
     namespace = "me.hd.wexpt"
     compileSdk = 36
@@ -12,7 +16,7 @@ android {
     sourceSets {
         named("main") {
             assets {
-                srcDirs("src/main/vue/wexpt/dist")
+                srcDirs(vueDistDir.path)
             }
         }
     }
@@ -72,6 +76,39 @@ android {
 
 kotlin {
     jvmToolchain(17)
+}
+
+val npmInstallVueDeps = tasks.register("npmInstallVueDeps") {
+    group = "wexpt"
+    description = "Install dependencies for Vue settings page"
+    inputs.files(file("$vueProjectDir/package.json"), file("$vueProjectDir/package-lock.json"))
+    outputs.dir(file("$vueProjectDir/node_modules"))
+    doLast {
+        exec {
+            workingDir = vueProjectDir
+            commandLine(npmCmd, "install")
+        }
+    }
+}
+
+val buildVueSettingsPage = tasks.register("buildVueSettingsPage") {
+    group = "wexpt"
+    description = "Build Vue settings page into Android assets"
+    dependsOn(npmInstallVueDeps)
+    inputs.dir(file("$vueProjectDir/src"))
+    inputs.file(file("$vueProjectDir/public/index.html"))
+    inputs.file(file("$vueProjectDir/vue.config.js"))
+    outputs.dir(vueDistDir)
+    doLast {
+        exec {
+            workingDir = vueProjectDir
+            commandLine(npmCmd, "run", "build")
+        }
+    }
+}
+
+tasks.preBuild {
+    dependsOn(buildVueSettingsPage)
 }
 
 dependencies {
