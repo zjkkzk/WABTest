@@ -12,7 +12,7 @@ object JsonUtil {
         return json.encodeToString(value)
     }
 
-    inline fun <reified T> fromJson(jsonStr: String): T {
-        return json.decodeFromString(jsonStr)
+    inline fun <reified T> fromJson(value: String): T {
+        return json.decodeFromString(value)
     }
 }

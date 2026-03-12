@@ -1,7 +1,6 @@
 package me.hd.wexpt.misc.webview
 
 import android.webkit.JavascriptInterface
-import me.hd.wexpt.core.brand.BrandServiceManager
 import me.hd.wexpt.core.expt.ExptAppItem
 import me.hd.wexpt.core.expt.ExptAppManager
 import me.hd.wexpt.misc.util.JsonUtil
@@ -17,10 +16,5 @@ object WebJsApi {
     fun getExptArgs(): String {
         val args = ExptAppManager.getAppItemArgs()
         return JsonUtil.toJson(args)
-    }
-
-    @JavascriptInterface
-    fun putEntranceInfo() {
-        BrandServiceManager.putEntranceInfo()
     }
 }

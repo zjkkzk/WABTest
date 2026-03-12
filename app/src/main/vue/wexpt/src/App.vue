@@ -59,17 +59,6 @@
         </div>
       </div>
 
-      <section class="page__card action-card">
-        <div class="action-card__header">卡包入口</div>
-        <a
-          role="button"
-          class="weui-btn weui-btn_primary action-btn"
-          href="javascript:"
-          @click="putEntranceInfo"
-        >
-          还原默认卡包
-        </a>
-      </section>
     </div>
   </div>
 </template>
@@ -139,18 +128,6 @@ export default {
         }
       } else {
         alert("保存出错: 接口异常");
-      }
-    },
-    putEntranceInfo() {
-      if (window.WExpt && window.WExpt.putEntranceInfo) {
-        try {
-          window.WExpt.putEntranceInfo();
-          alert("还原成功");
-        } catch (error) {
-          alert("还原出错: 调用失败");
-        }
-      } else {
-        alert("还原出错: 接口异常");
       }
     },
   },
@@ -358,20 +335,6 @@ export default {
 
 .page__card .weui-btn_primary:active {
   background: var(--accent-dark);
-}
-
-.action-card {
-  margin-top: 12px;
-  padding: 14px 16px;
-}
-
-.action-card__header {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.action-card .action-btn {
-  margin-top: 14px;
 }
 
 @media (min-width: 720px) {
