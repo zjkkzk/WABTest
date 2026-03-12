@@ -2,15 +2,15 @@
   <div id="app">
     <div class="page">
       <header class="page__header">
-        <div class="page__title">实验配置</div>
+        <div class="page__title">WExpt</div>
         <div class="page__subtitle">勾选保存后重启应用生效</div>
       </header>
 
-      <div class="page__summary">
-        <span>已启用 {{ enabledCount }} / {{ totalCount }}</span>
-      </div>
-
       <div class="weui-form page__card">
+        <div class="card__header">
+          <div class="card__title">实验配置</div>
+          <div class="card__summary">已启用 {{ enabledCount }} / {{ totalCount }}</div>
+        </div>
         <div class="weui-form__bd">
           <div
             v-for="group in normalizedGroups"
@@ -58,6 +58,18 @@
           </div>
         </div>
       </div>
+
+      <section class="page__card action-card">
+        <div class="action-card__header">卡包入口</div>
+        <a
+          role="button"
+          class="weui-btn weui-btn_primary action-btn"
+          href="javascript:"
+          @click="putEntranceInfo"
+        >
+          还原默认卡包
+        </a>
+      </section>
     </div>
   </div>
 </template>
@@ -129,6 +141,18 @@ export default {
         alert("保存出错: 接口异常");
       }
     },
+    putEntranceInfo() {
+      if (window.WExpt && window.WExpt.putEntranceInfo) {
+        try {
+          window.WExpt.putEntranceInfo();
+          alert("还原成功");
+        } catch (error) {
+          alert("还原出错: 调用失败");
+        }
+      } else {
+        alert("还原出错: 接口异常");
+      }
+    },
   },
 };
 </script>
@@ -156,11 +180,11 @@ export default {
 .page {
   max-width: 680px;
   margin: 0 auto;
-  padding: 24px 16px 28px;
+  padding: 20px 16px 24px;
 }
 
 .page__header {
-  padding: 8px 4px 16px;
+  padding: 8px 4px 12px;
 }
 
 .page__title {
@@ -175,15 +199,6 @@ export default {
   color: var(--subtle);
 }
 
-.page__summary {
-  margin: 4px 4px 14px;
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(15, 139, 141, 0.08);
-  color: var(--accent-dark);
-  font-size: 13px;
-}
-
 .page__card {
   background: var(--card);
   border-radius: 16px;
@@ -192,12 +207,71 @@ export default {
   overflow: hidden;
 }
 
+.page__card.weui-form {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.page__card.weui-form:before,
+.page__card.weui-form:after {
+  display: none;
+}
+
+.card__header {
+  padding: 12px 16px 8px;
+  margin-top: 0;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card__summary {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(15, 139, 141, 0.08);
+  color: var(--accent-dark);
+  font-size: 13px;
+}
+
 .page__card .weui-cells {
   margin-top: 0;
 }
 
+.page__card .weui-cells__group.weui-cells__group_form {
+  margin: 0;
+  padding: 0;
+}
+
+.page__card .weui-form__bd {
+  padding-bottom: 0;
+}
+
+.page__card .weui-form__ft {
+  padding: 8px 16px 10px !important;
+  min-height: 0;
+  line-height: normal;
+}
+
+.page__card .weui-form__ft:before,
+.page__card .weui-form__ft:after {
+  display: none !important;
+}
+
+.page__card .weui-form__opr-area {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.page__card .weui-form__ft .weui-btn {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .group {
-  padding: 6px 0 2px;
+  padding: 2px 0 0;
 }
 
 .group__title {
@@ -221,12 +295,49 @@ export default {
 
 .page__card .weui-cell {
   padding: 14px 16px;
+  background: var(--card);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.page__card .weui-cell__hd {
+  margin-right: 0;
+  padding-right: 0;
+  flex: 0 0 24px;
+  width: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__card .weui-check__label .weui-cell__hd {
+  padding-right: 0;
+}
+
+.page__card .weui-cell__bd {
+  flex: 1;
+  min-width: 0;
+  padding-left: 10px;
+}
+
+.page__card .weui-icon-checked {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .page__card .weui-cell:before {
   left: 16px;
   right: 16px;
   border-top-color: var(--border);
+}
+
+.page__card .weui-cell__bd,
+.page__card .weui-cell p,
+.page__card .weui-check__label {
+  color: var(--text);
 }
 
 .cell-title {
@@ -249,11 +360,18 @@ export default {
   background: var(--accent-dark);
 }
 
-.page__footer {
+.action-card {
+  margin-top: 12px;
+  padding: 14px 16px;
+}
+
+.action-card__header {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.action-card .action-btn {
   margin-top: 14px;
-  padding: 0 6px;
-  font-size: 12px;
-  color: var(--subtle);
 }
 
 @media (min-width: 720px) {
