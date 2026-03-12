@@ -1,10 +1,10 @@
-package me.hd.wexpt.core
+package me.hd.wexpt.core.expt
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class AppItem(
+data class ExptAppItem(
     @SerialName("ExptId")
     var exptId: Int = 0,
     @SerialName("GroupId")

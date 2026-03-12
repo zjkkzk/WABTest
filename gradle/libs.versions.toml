@@ -11,6 +11,7 @@ yukihookapi-ksp-xposed = { module = "com.highcapable.yukihookapi:ksp-xposed", ve
 kavaref-core = { module = "com.highcapable.kavaref:kavaref-core", version = "1.0.2" }
 kavaref-extension = { module = "com.highcapable.kavaref:kavaref-extension", version = "1.0.2" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.10.0" }
+kotlinx-serialization-protobuf = { module = "org.jetbrains.kotlinx:kotlinx-serialization-protobuf", version = "1.10.0" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

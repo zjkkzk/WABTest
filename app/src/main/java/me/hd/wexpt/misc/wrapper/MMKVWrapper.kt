@@ -46,4 +46,18 @@ class MMKVWrapper private constructor(private val mmkv: Any) {
             parameters(String::class, String::class)
         }.invoke<String>(key, defValue)!!
     }
+
+    fun putBytes(key: String, value: ByteArray) {
+        mmkv.asResolver().firstMethod {
+            name = "putBytes"
+            parameters(String::class, ByteArray::class)
+        }.invoke(key, value)
+    }
+
+    fun getBytes(key: String, defValue: ByteArray): ByteArray {
+        return mmkv.asResolver().firstMethod {
+            name = "getBytes"
+            parameters(String::class, ByteArray::class)
+        }.invoke<ByteArray>(key, defValue)!!
+    }
 }
