@@ -30,6 +30,12 @@ WeChat Expt App
 
 ## 预览
 
+### 8.0.69.3040.0x28004555+
+
+| 预览图                                                                                                                                                                              | 功能                 |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| <img src="images/clicfg_mediagroup_sender_ui_visibility_2/before/img.png" width="180" /> <img src="images/clicfg_mediagroup_sender_ui_visibility_2/after/img.png" width="180" /> | MediaGroup - UI 展示 |
+
 ### 8.0.69.3040.0x2800453E+
 
 | 预览图                                                                                                                                                    | 功能         |
