@@ -1,5 +1,15 @@
 ﻿[
   {
+    "8.0.69.3040.0x2800455a+": [
+      {
+        "name": "[图]语音输入支持长按快捷发送",
+        "key": "clicfg_chatting_voice_input_long_click",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.69.3040.0x28004555+": [
       {
         "name": "[图]MediaGroup - UI 展示",
