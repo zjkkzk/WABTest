@@ -1,5 +1,45 @@
 ﻿[
   {
+    "8.0.70.3040.0x28004610+": [
+      {
+        "name": "聊天消息放大镜功能",
+        "key": "clicfg_chat_msg_text_magnifier",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "启用译文朗读功能",
+        "key": "clicfg_translation_speech",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "个人二维码页面使用新聚合样式",
+        "key": "clicfg_use_new_my_qrcode",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "转发后SnackBar跳Chatting",
+        "key": "clicfg_forward_snack_bar_jump_chatting",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "批量设标签",
+        "key": "clicfg_batch_label_enable",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "浮窗新样式",
+        "key": "clicfg_multi_floatball_new_style",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.69.3040.0x2800455a+": [
       {
         "name": "[图]语音输入支持长按快捷发送",
