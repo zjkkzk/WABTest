@@ -42,6 +42,12 @@
   {
     "8.0.69.3040.0x2800455a+": [
       {
+        "name": "聊天语音输入支持指令模式",
+        "key": "clicfg_chatting_voice_input_instruction",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
         "name": "[图]语音输入支持长按快捷发送",
         "key": "clicfg_chatting_voice_input_long_click",
         "trueVal": "MQ==",

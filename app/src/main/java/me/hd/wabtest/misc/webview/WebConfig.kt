@@ -5,7 +5,7 @@ import me.hd.wabtest.hook.HostData
 import me.hd.wabtest.misc.ext.readAssetsText
 
 object WebConfig {
-    const val URL = "http://weixin.abtest.com/"
+    const val URL = "http://abtest.weixin.com/"
 
     fun getHtml(path: String): String {
         val ctx = HostData.appContext
