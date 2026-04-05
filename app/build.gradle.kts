@@ -25,8 +25,8 @@ android {
         applicationId = "me.hd.wabtest"
         minSdk = 27
         targetSdk = 36
-        versionCode = 7
-        versionName = "1.0.6"
+        versionCode = 26040520
+        versionName = "1.0.7"
         buildConfigField("String", "APP_NAME", "\"WABTest\"")
     }
 
