@@ -22,6 +22,9 @@
 ## 说明:
 
 WeChat ABTest
+
+设置入口: http://abtest.weixin.com/
+
 > 在 GitHub 点击右上角 ⭐ Star 以支持我在空余时间继续开发
 
 - 一切开发旨在学习，请勿用于非法用途
