@@ -1,8 +1,8 @@
-package me.hd.wexpt.core.expt
+package me.hd.wabtest.core.expt
 
-import me.hd.wexpt.misc.util.JsonUtil
-import me.hd.wexpt.misc.wrapper.ConfigWrapper
-import me.hd.wexpt.misc.wrapper.MMKVWrapper
+import me.hd.wabtest.misc.util.JsonUtil
+import me.hd.wabtest.misc.wrapper.ConfigWrapper
+import me.hd.wabtest.misc.wrapper.MMKVWrapper
 
 object ExptAppManager {
     private val uin by lazy { ConfigWrapper.get("system_config_prefs").getUin() }

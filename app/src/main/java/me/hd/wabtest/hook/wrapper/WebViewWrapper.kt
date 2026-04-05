@@ -1,4 +1,4 @@
-package me.hd.wexpt.hook.wrapper
+package me.hd.wabtest.hook.wrapper
 
 import com.highcapable.kavaref.KavaRef.Companion.asResolver
 

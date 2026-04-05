@@ -2,7 +2,7 @@
   <div id="app">
     <div class="page">
       <header class="page__header">
-        <div class="page__title">WExpt</div>
+        <div class="page__title">WABTest</div>
         <div class="page__subtitle">勾选保存后重启应用生效</div>
       </header>
 
@@ -104,9 +104,9 @@ export default {
   },
   methods: {
     loadLocalArgs() {
-      if (window.WExpt && window.WExpt.getExptArgs) {
+      if (window.WABTest && window.WABTest.getExptArgs) {
         try {
-          const json = window.WExpt.getExptArgs();
+          const json = window.WABTest.getExptArgs();
           return JSON.parse(json) || [];
         } catch (error) {
           return [];
@@ -119,9 +119,9 @@ export default {
         Key: config.key,
         Val: this.checked[config.key] ? config.trueVal : config.falseVal,
       }));
-      if (window.WExpt && window.WExpt.putExptArgs) {
+      if (window.WABTest && window.WABTest.putExptArgs) {
         try {
-          window.WExpt.putExptArgs(JSON.stringify(args));
+          window.WABTest.putExptArgs(JSON.stringify(args));
           alert("保存成功");
         } catch (error) {
           alert("保存出错: 调用失败");

@@ -1,11 +1,11 @@
-package me.hd.wexpt.misc.webview
+package me.hd.wabtest.misc.webview
 
 import com.highcapable.yukihookapi.hook.factory.injectModuleAppResources
-import me.hd.wexpt.hook.HostData
-import me.hd.wexpt.misc.ext.readAssetsText
+import me.hd.wabtest.hook.HostData
+import me.hd.wabtest.misc.ext.readAssetsText
 
 object WebConfig {
-    const val URL = "http://wexpt.weixin.com/"
+    const val URL = "http://weixin.abtest.com/"
 
     fun getHtml(path: String): String {
         val ctx = HostData.appContext

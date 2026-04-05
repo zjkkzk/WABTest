@@ -31,5 +31,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WExpt"
+rootProject.name = "WABTest"
 include(":app")

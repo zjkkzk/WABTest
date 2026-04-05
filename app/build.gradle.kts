@@ -5,12 +5,12 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
 }
 
-val vueProjectDir = file("src/main/vue/wexpt")
+val vueProjectDir = file("src/main/vue/wabtest")
 val vueDistDir = file("$vueProjectDir/dist")
 val npmCmd = if (System.getProperty("os.name").startsWith("Windows")) "npm.cmd" else "npm"
 
 android {
-    namespace = "me.hd.wexpt"
+    namespace = "me.hd.wabtest"
     compileSdk = 36
 
     sourceSets {
@@ -22,12 +22,12 @@ android {
     }
 
     defaultConfig {
-        applicationId = "me.hd.wexpt"
+        applicationId = "me.hd.wabtest"
         minSdk = 27
         targetSdk = 36
         versionCode = 7
         versionName = "1.0.6"
-        buildConfigField("String", "APP_NAME", "\"WExpt\"")
+        buildConfigField("String", "APP_NAME", "\"WABTest\"")
     }
 
     androidResources {
@@ -79,7 +79,7 @@ kotlin {
 }
 
 val npmInstallVueDeps = tasks.register("npmInstallVueDeps") {
-    group = "wexpt"
+    group = "wabtest"
     description = "Install dependencies for Vue settings page"
     inputs.files(file("$vueProjectDir/package.json"), file("$vueProjectDir/package-lock.json"))
     outputs.dir(file("$vueProjectDir/node_modules"))
@@ -92,7 +92,7 @@ val npmInstallVueDeps = tasks.register("npmInstallVueDeps") {
 }
 
 val buildVueSettingsPage = tasks.register("buildVueSettingsPage") {
-    group = "wexpt"
+    group = "wabtest"
     description = "Build Vue settings page into Android assets"
     dependsOn(npmInstallVueDeps)
     inputs.dir(file("$vueProjectDir/src"))

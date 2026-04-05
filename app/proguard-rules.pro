@@ -6,8 +6,9 @@
 -packageobfuscationdictionary obf-dict.txt
 
 -overloadaggressively
+-repackageclasses ''
+-keepattributes SourceFile,LineNumberTable
 -renamesourcefileattribute 'obf'
--repackageclasses 'me.hd.wexpt.obf'
 
 -assumenosideeffects class kotlin.jvm.internal.Intrinsics {
     public static void check*(...);
@@ -17,6 +18,6 @@
     ** requireNonNull(...);
 }
 
--keep class me.hd.wexpt.hook.HookEntry
+-keep class me.hd.wabtest.hook.HookEntry
 
 -dontwarn java.lang.reflect.AnnotatedType

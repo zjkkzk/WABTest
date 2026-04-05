@@ -1,9 +1,9 @@
-package me.hd.wexpt.misc.webview
+package me.hd.wabtest.misc.webview
 
 import android.webkit.JavascriptInterface
-import me.hd.wexpt.core.expt.ExptAppItem
-import me.hd.wexpt.core.expt.ExptAppManager
-import me.hd.wexpt.misc.util.JsonUtil
+import me.hd.wabtest.core.expt.ExptAppItem
+import me.hd.wabtest.core.expt.ExptAppManager
+import me.hd.wabtest.misc.util.JsonUtil
 
 object WebJsApi {
     @JavascriptInterface

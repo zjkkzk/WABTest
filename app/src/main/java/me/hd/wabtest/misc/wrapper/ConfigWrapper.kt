@@ -1,8 +1,8 @@
-package me.hd.wexpt.misc.wrapper
+package me.hd.wabtest.misc.wrapper
 
 import android.content.Context
 import android.content.SharedPreferences
-import me.hd.wexpt.hook.HostData.appContext
+import me.hd.wabtest.hook.HostData.appContext
 
 class ConfigWrapper private constructor(private val pref: SharedPreferences) {
     companion object {

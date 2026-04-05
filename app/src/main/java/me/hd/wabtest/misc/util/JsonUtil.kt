@@ -1,4 +1,4 @@
-package me.hd.wexpt.misc.util
+package me.hd.wabtest.misc.util
 
 import kotlinx.serialization.json.Json
 
