@@ -1,5 +1,21 @@
 ﻿[
   {
+    "8.0.71.3060.0x28004710+": [
+      {
+        "name": "聊天60s语音支持自动发送",
+        "key": "clicfg_voice_60min_auto_send",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "markdown 文件支持预览",
+        "key": "clicfg_local_markdown_file_preview_enable",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.70.3040.0x28004610+": [
       {
         "name": "聊天消息放大镜功能",
