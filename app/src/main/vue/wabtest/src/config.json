@@ -1,5 +1,21 @@
 ﻿[
   {
+    "8.0.71.3060.0x28004730+": [
+      {
+        "name": "Markdown消息双击预览",
+        "key": "clicfg_markdown_preview_enable",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "新自动下载管理器",
+        "key": "clicfg_new_auto_download_mgr",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.71.3060.0x28004710+": [
       {
         "name": "聊天60s语音支持自动发送",
