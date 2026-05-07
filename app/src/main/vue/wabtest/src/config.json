@@ -1,5 +1,33 @@
 ﻿[
   {
+    "8.0.72.3080.0x28004810+": [
+      {
+        "name": "是否显示 WeClawBot 转发入口",
+        "key": "clicfg_android_show_weclaw_bot_forward_entrance",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]会话列表未读模式",
+        "key": "clicfg_conv_unread_mode_android",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "Api35-Edge2Edge-是否开启",
+        "key": "repairerConfig_enable_edge_to_edge_switch",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "WeClaw在线状态展示开关",
+        "key": "clicfg_weclaw_show_status",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.71.3060.0x28004730+": [
       {
         "name": "Markdown消息双击预览",
@@ -34,7 +62,7 @@
   {
     "8.0.70.3040.0x28004610+": [
       {
-        "name": "聊天消息放大镜功能",
+        "name": "[图]聊天消息放大镜功能",
         "key": "clicfg_chat_msg_text_magnifier",
         "trueVal": "MQ==",
         "falseVal": "MA=="
