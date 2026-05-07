@@ -10,6 +10,14 @@
         <div class="card__header">
           <div class="card__title">实验配置</div>
           <div class="card__summary">已启用 {{ enabledCount }} / {{ totalCount }}</div>
+          <div class="card__actions">
+            <button type="button" class="card__action" @click="selectAll">
+              全选
+            </button>
+            <button type="button" class="card__action" @click="invertSelection">
+              反选
+            </button>
+          </div>
         </div>
         <div class="weui-form__bd">
           <div
@@ -45,20 +53,8 @@
             </div>
           </div>
         </div>
-        <div class="weui-form__ft">
-          <div class="weui-form__opr-area">
-            <a
-              role="button"
-              class="weui-btn weui-btn_primary"
-              href="javascript:"
-              @click="save"
-            >
-              保存
-            </a>
-          </div>
-        </div>
       </div>
-
+      <button type="button" class="save-fab" @click="save">保存</button>
     </div>
   </div>
 </template>
@@ -114,6 +110,16 @@ export default {
       }
       return [];
     },
+    selectAll() {
+      this.flatConfigs.forEach((config) => {
+        this.$set(this.checked, config.key, true);
+      });
+    },
+    invertSelection() {
+      this.flatConfigs.forEach((config) => {
+        this.$set(this.checked, config.key, !this.checked[config.key]);
+      });
+    },
     save() {
       const args = this.flatConfigs.map((config) => ({
         Key: config.key,
@@ -157,7 +163,7 @@ export default {
 .page {
   max-width: 680px;
   margin: 0 auto;
-  padding: 20px 16px 24px;
+  padding: 20px 16px 96px;
 }
 
 .page__header {
@@ -213,6 +219,26 @@ export default {
   font-size: 13px;
 }
 
+.card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card__action {
+  border: 1px solid rgba(15, 139, 141, 0.2);
+  background: rgba(15, 139, 141, 0.08);
+  color: var(--accent-dark);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.card__action:active {
+  background: rgba(15, 139, 141, 0.16);
+}
+
 .page__card .weui-cells {
   margin-top: 0;
 }
@@ -224,27 +250,6 @@ export default {
 
 .page__card .weui-form__bd {
   padding-bottom: 0;
-}
-
-.page__card .weui-form__ft {
-  padding: 8px 16px 10px !important;
-  min-height: 0;
-  line-height: normal;
-}
-
-.page__card .weui-form__ft:before,
-.page__card .weui-form__ft:after {
-  display: none !important;
-}
-
-.page__card .weui-form__opr-area {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.page__card .weui-form__ft .weui-btn {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
 }
 
 .group {
@@ -329,12 +334,26 @@ export default {
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' width='24' height='24' rx='12' fill='%230F8B8D'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.2712 16.2899L6.5 12.5187L7.44281 11.5759L10.7426 14.8757L18.2851 7.33325L19.2279 8.27606L11.214 16.2899C10.9537 16.5503 10.5316 16.5503 10.2712 16.2899Z' fill='white'/%3E%3C/svg%3E") !important;
 }
 
-.page__card .weui-btn_primary {
-  background: var(--accent);
+.save-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 20;
+  min-width: 64px;
+  height: 56px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(15, 139, 141, 0.28);
 }
 
-.page__card .weui-btn_primary:active {
-  background: var(--accent-dark);
+.save-fab:active {
+  transform: translateY(1px);
+  box-shadow: 0 8px 18px rgba(15, 139, 141, 0.22);
 }
 
 @media (min-width: 720px) {
@@ -343,6 +362,9 @@ export default {
   }
   .page__title {
     font-size: 24px;
+  }
+  .save-fab {
+    right: calc((100vw - 680px) / 2 + 16px);
   }
 }
 </style>
