@@ -194,6 +194,16 @@
     ]
   },
   {
+    "8.0.68+": [
+      {
+        "name": "[图]朋友圈Flutter页面",
+        "key": "clicfg_sns_flutter_self_page",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.67+": [
       {
         "name": "聊天机器人负一屏",

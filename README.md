@@ -71,6 +71,12 @@ WeChat ABTest
 | <img src="images/clicfg_chatting_chatfooter_fix_big_font/before/img.png" width="180" /> <img src="images/clicfg_chatting_chatfooter_fix_big_font/after/img.png" width="180" /> | 聊天输入栏大字体适配     |
 | <img src="images/clicfg_enable_chat_records_tts_entrance/before/img.png" width="180" /> <img src="images/clicfg_enable_chat_records_tts_entrance/after/img.png" width="180" /> | 启用聊天记录「从当前听」入口 |
 
+### 8.0.68+
+
+| 预览图                                                                                                                                                      | 功能           |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|
+| <img src="images/clicfg_sns_flutter_self_page/before/img.png" width="180" /> <img src="images/clicfg_sns_flutter_self_page/after/img.png" width="180" /> | 朋友圈Flutter页面 |
+
 ### 8.0.67+
 
 | 预览图                                                                                                                                                                                  | 功能           |
