@@ -112,9 +112,13 @@ tasks.preBuild {
 }
 
 dependencies {
-    implementation(libs.annotation)
+    compileOnly(libs.annotation)
     compileOnly(libs.xposed.api)
-    implementation(libs.yukihookapi.api)
+    implementation(libs.yukihookapi.api) {
+        exclude(group = "androidx.appcompat", module = "appcompat")
+        exclude(group = "androidx.preference", module = "preference-ktx")
+        exclude(group = "com.google.android.material", module = "material")
+    }
     ksp(libs.yukihookapi.ksp.xposed)
     implementation(libs.kavaref.core)
     implementation(libs.kavaref.extension)
