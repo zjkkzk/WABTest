@@ -1,5 +1,123 @@
 ﻿[
   {
+    "8.0.74.3100.0x28004a10+": [
+      {
+        "name": "[图]高清头像高分辨率开关",
+        "key": "clicfg_avatar_hd_resolution_upgrade",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "WeClaw 快捷指令",
+        "key": "clicfg_weclaw_shortcut_command",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]输入框为空时长按不弹菜单改为弹键盘",
+        "key": "clicfg_chatfooter_longpress_suppress_menu",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]文件选择器:系统文件选择器是否支持多选",
+        "key": "clicfg_file_selector_multi_select_and",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]Markdown消息双击预览",
+        "key": "clicfg_markdown_preview_enable",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]看大图展示相册添加日期",
+        "key": "clicfg_show_img_album_date_tip",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]系统消息和拍一拍长按删除",
+        "key": "clicfg_sys_msg_delete",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "Markdown - WeClaw 流式信令启用",
+        "key": "clicfg_weclaw_stream_start_xml_enable",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "图片会话气泡的loading圆环是否对齐iOS样式",
+        "key": "clicfg_chat_mvvmitem_img_arc_progress",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "二维码页新好友提示条",
+        "key": "clicfg_qrcode_new_friend_bar",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "照片墙 - ImageGallery撤回对齐Preview",
+        "key": "clicfg_image_gallery_revoke_enabled",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]照片墙 - 使用新照片墙",
+        "key": "clicfg_msg_history_gallery_enabled",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "照片墙 - Gallery 入口逻辑",
+        "key": "clicfg_msg_history_gallery_locate_preview_enabled",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]照片墙 - PinchZoom 捏合缩放",
+        "key": "clicfg_msg_history_gallery_pinch_zoom_enabled",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]照片墙 - 选择模式全选按钮可见",
+        "key": "clicfg_msg_history_gallery_select_all_visible",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]朋友圈个人页昵称旁的icon可点(需重启)",
+        "key": "clicfg_status_icon_click_enable_sns_album_profile_android",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]状态icon新样式(需重启)",
+        "key": "clicfg_status_icon_style_upgrade_android",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]状态卡片弹窗的发表入口(需重启)",
+        "key": "clicfg_status_show_post_entry_on_card_dialog_android",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      },
+      {
+        "name": "[图]状态发表页Flutter(需重启)",
+        "key": "clicfg_textstatus_android_use_flutter_publish_page_android",
+        "trueVal": "MQ==",
+        "falseVal": "MA=="
+      }
+    ]
+  },
+  {
     "8.0.72.3080.0x28004810+": [
       {
         "name": "是否显示 WeClawBot 转发入口",
@@ -20,7 +138,7 @@
         "falseVal": "MA=="
       },
       {
-        "name": "WeClaw在线状态展示开关",
+        "name": "[图]WeClaw在线状态展示开关",
         "key": "clicfg_weclaw_show_status",
         "trueVal": "MQ==",
         "falseVal": "MA=="
