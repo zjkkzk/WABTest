@@ -33,11 +33,30 @@ WeChat ABTest
 
 ## 预览
 
+### 8.0.74.3100.0x28004a10+
+
+| 预览图                                                                                                                                                                                                                  | 功能                    |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
+| <img src="images/clicfg_avatar_hd_resolution_upgrade/before/img.png" width="180" /> <img src="images/clicfg_avatar_hd_resolution_upgrade/after/img.png" width="180" />                                               | 高清头像高分辨率开关            |
+| <img src="images/clicfg_chatfooter_longpress_suppress_menu/before/img.png" width="180" /> <img src="images/clicfg_chatfooter_longpress_suppress_menu/after/img.png" width="180" />                                   | 输入框为空时长按不弹菜单改为弹键盘     |
+| <img src="images/clicfg_file_selector_multi_select_and/before/img.png" width="180" /> <img src="images/clicfg_file_selector_multi_select_and/after/img.png" width="180" />                                           | 文件选择器:系统文件选择器是否支持多选   |
+| <img src="images/clicfg_markdown_preview_enable/before/img.png" width="180" /> <img src="images/clicfg_markdown_preview_enable/after/img.png" width="180" />                                                         | Markdown消息双击预览        |
+| <img src="images/clicfg_show_img_album_date_tip/before/img.png" width="180" /> <img src="images/clicfg_show_img_album_date_tip/after/img.png" width="180" />                                                         | 看大图展示相册添加日期           |
+| <img src="images/clicfg_sys_msg_delete/before/img.png" width="180" /> <img src="images/clicfg_sys_msg_delete/after/img.png" width="180" />                                                                           | 系统消息和拍一拍长按删除          |
+| <img src="images/clicfg_msg_history_gallery_enabled/before/img.png" width="180" /> <img src="images/clicfg_msg_history_gallery_enabled/after/img.png" width="180" />                                                 | 照片墙 - 使用新照片墙          |
+| <img src="images/clicfg_msg_history_gallery_pinch_zoom_enabled/before/img.png" width="180" /> <img src="images/clicfg_msg_history_gallery_pinch_zoom_enabled/after/img.png" width="180" />                           | 照片墙 - PinchZoom 捏合缩放  |
+| <img src="images/clicfg_msg_history_gallery_select_all_visible/before/img.png" width="180" /> <img src="images/clicfg_msg_history_gallery_select_all_visible/after/img.png" width="180" />                           | 照片墙 - 选择模式全选按钮可见      |
+| <img src="images/clicfg_status_icon_click_enable_sns_album_profile_android/before/img.png" width="180" /> <img src="images/clicfg_status_icon_click_enable_sns_album_profile_android/after/img.png" width="180" />   | 朋友圈个人页昵称旁的icon可点(需重启) |
+| <img src="images/clicfg_status_icon_style_upgrade_android/before/img.png" width="180" /> <img src="images/clicfg_status_icon_style_upgrade_android/after/img.png" width="180" />                                     | 状态icon新样式(需重启)        |
+| <img src="images/clicfg_status_show_post_entry_on_card_dialog_android/before/img.png" width="180" /> <img src="images/clicfg_status_show_post_entry_on_card_dialog_android/after/img.png" width="180" />             | 状态卡片弹窗的发表入口(需重启)      |
+| <img src="images/clicfg_textstatus_android_use_flutter_publish_page_android/before/img.png" width="180" /> <img src="images/clicfg_textstatus_android_use_flutter_publish_page_android/after/img.png" width="180" /> | 状态发表页Flutter(需重启)     |
+
 ### 8.0.72.3080.0x28004810+
 
-| 预览图                                                                                                                                                            | 功能       |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| <img src="images/clicfg_conv_unread_mode_android/before/img.png" width="180" /> <img src="images/clicfg_conv_unread_mode_android/after/img.png" width="180" /> | 会话列表未读模式 |
+| 预览图                                                                                                                                                            | 功能             |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+| <img src="images/clicfg_conv_unread_mode_android/before/img.png" width="180" /> <img src="images/clicfg_conv_unread_mode_android/after/img.png" width="180" /> | 会话列表未读模式       |
+| <img src="images/clicfg_weclaw_show_status/before/img.png" width="180" /> <img src="images/clicfg_weclaw_show_status/after/img.png" width="180" />             | WeClaw在线状态展示开关 |
 
 ### 8.0.70.3040.0x28004610+
 
